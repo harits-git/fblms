@@ -1,0 +1,11 @@
+[07-Jan-2012 00:36:07] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/tweetcod/public_html/fb-lms/config.php:73) in /home/tweetcod/public_html/fb-lms/library/fb/facebook.php on line 37
+[07-Jan-2012 00:36:28] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/tweetcod/public_html/fb-lms/config.php:73) in /home/tweetcod/public_html/fb-lms/library/fb/facebook.php on line 37
+[07-Jan-2012 00:51:11] PHP Fatal error:  Call to a member function MoveNext() on a non-object in /home/tweetcod/public_html/fb-lms/application/lecturer/schedule.php on line 111
+[07-Jan-2012 09:45:07] PHP Parse error:  syntax error, unexpected '}' in /home/tweetcod/public_html/fb-lms/index.php on line 117
+[07-Jan-2012 09:45:24] PHP Parse error:  syntax error, unexpected '}' in /home/tweetcod/public_html/fb-lms/index.php on line 117
+[07-Jan-2012 09:46:17] PHP Parse error:  syntax error, unexpected '}' in /home/tweetcod/public_html/fb-lms/index.php on line 117
+[07-Jan-2012 21:25:33] CSRF state token does not match one provided.
+[08-Jan-2012 11:24:52] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/tweetcod/public_html/fb-lms/application/login/index.php on line 43
+[17-Jan-2012 09:19:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/hassanho/public_html/fb-lms/index.php:38) in /home/hassanho/public_html/fb-lms/application/lecturer/delete.php on line 21
+[17-Jan-2012 11:04:54] PHP Fatal error:  Uncaught OAuthException: (#803) Some of the aliases you requested do not exist: ".$fbid."
+  thrown in /home/hassanho/public_html/fb-lms/library/fb/base_facebook.php on line 1039

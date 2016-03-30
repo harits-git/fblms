@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps JavaScript API v3 Example: Common Loader</title>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript">
+  var infowindow;
+  var map;
+
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(-7.96217, 112.616612);
+    var myOptions = {
+      zoom: 13,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    downloadUrl("data.xml", function(data) {
+      var markers = data.documentElement.getElementsByTagName("marker");
+      for (var i = 0; i < markers.length; i++) {
+        var latlng = new google.maps.LatLng(parseFloat(markers[i].getAttribute("lat")),
+                                    parseFloat(markers[i].getAttribute("lng")));
+        var marker = createMarker(latlng, markers[i].getAttribute("name"), markers[i].getAttribute("info"));
+       }
+     });
+  }
+
+  function createMarker(latlng, name, content) {
+    var marker = new google.maps.Marker({position: latlng, map: map, title: name});
+    google.maps.event.addListener(marker, "click", function() {
+      if (infowindow) infowindow.close();
+      infowindow = new google.maps.InfoWindow({content: content});
+      infowindow.open(map, marker);
+    });
+    return marker;
+  }
+/*
+    function createMarker(latlng, name, content) {
+    var contentString = content;
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+	  title: name,
+      zIndex: Math.round(latlng.lat()*-100000)<<5
+      });
+ 
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(contentString); 
+      infowindow.open(map,marker);
+      });
+    google.maps.event.trigger(marker, 'click');    
+    return marker;
+  }
+*/
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:400px; height:300px"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+  <marker name="Universitas Negeri Malang" 
+	info="Universitas Negeri Malang (disingkat UM) adalah perguruan tinggi negeri di Malang, Indonesia, yang berdiri pada 18 Oktober 1954. Merupakan perubahan dari IKIP Malang, yang merupakan IKIP tertua di Indonesia. Singkatan resmi dari namanya adalah &#39;UM' yang merupakan akronim dari Universitas Negeri Malang. Rektor UM saat ini adalah Prof. Dr. H. Soeparno untuk masa jabatan 2005-2010."
+	lat="-7.962170" lng="112.616612"/>
+  <marker name="M Jauharul F"
+	info="Tempat tinggal M Jauharul Fuady"
+	lat="-7.656700" lng="112.893300"/>
+  <marker name="Acak #1"
+	info="Hasil pengacakan pertama"
+	lat="-7.964457" lng="112.619062"/>
+  <marker name="Acak #2"
+	info="Hasil pengacakan kedua"
+	lat="-7.945427" lng="112.612307"/>
+</markers>
